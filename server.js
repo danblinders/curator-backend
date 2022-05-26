@@ -467,6 +467,6 @@ app.post('/delete', (req, res) => {
   });
 })
 
-app.listen('3001', () => {
-  console.log('server was successfully launched on port 3001');
+app.listen(process.env.PORT | '3001', () => {
+  console.log('server was successfully launched');
 });
