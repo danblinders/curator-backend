@@ -17,9 +17,9 @@ const upload = multer({storage: multer.memoryStorage()})
 
 const db = mysql.createConnection({
   host: '31.31.198.99',
-  user: 'u1699228_default',
+  user: 'u1699228_admin',
   password : 'rQiWkLLhd56X5dN8',
-  database:'u1699228_default'
+  database:'u1699228_curator_db'
 });
 
 app.get('/', (req, res) => {
