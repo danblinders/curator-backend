@@ -16,7 +16,7 @@ app.use(cors());
 const upload = multer({storage: multer.memoryStorage()})
 
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: '31.31.198.99',
   user: 'u1699228_default',
   password : 'rQiWkLLhd56X5dN8',
   database:'u1699228_default'
