@@ -54,13 +54,14 @@ app.post('/groups', (req, res) => {
 
 app.post('/add-curator', (req, res) => {
   const first_name = req.body.first_name,
+        second_name = req.body.second_name,
         last_name = req.body.last_name,
         phone = req.body.phone,
         email = req.body.email,
         login = req.body.login,
         password = req.body.password;
 
-  db.query('INSERT INTO curators(first_name, last_name, email, phone, login, password) VALUES(?, ?, ?, ?, ?, ?) ', [first_name, last_name, email, phone, login, password], (err, result) => {
+  db.query('INSERT INTO curators(first_name, second_name, last_name, email, phone, login, password) VALUES(?, ?, ?, ?, ?, ?, ?) ', [first_name, second_name, last_name, email, phone, login, password], (err, result) => {
     if (err) {
       res.send({type: 'error', message: err.message});
     } else {
